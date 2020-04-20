@@ -6,13 +6,19 @@
 trigger:
 - master
 
+resources:
+- repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
 - task: Maven@3
   inputs:
-    mavenPomFile: 'pom.xml'
+    mavenPomFile: 'devopstest/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.8'
