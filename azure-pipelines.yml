@@ -11,7 +11,14 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-
+- task: GitHubRelease@1
+  inputs:
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
 pool:
   vmImage: 'ubuntu-latest'
 
