@@ -27,7 +27,7 @@ steps:
     repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     tagSource: 'gitTag'
-    tag: 'v0.0.1'
+    tag: '0.0.1'
     assetUploadMode: 'replace'
     target: '$(Build.SourceVersion)'
     changeLogCompareToRelease: 'lastFullRelease'
