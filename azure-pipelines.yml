@@ -24,10 +24,11 @@ steps:
 - task: GitHubRelease@1
   inputs:
     gitHubConnection: 'devopstest-demogithubacc'
-    repositoryName: 'nagyistge/$(Build.Repository.Name)'
+    repositoryName: '$(Build.Repository.Name)'
     action: 'create'
-    target: '$(Build.SourceVersion)'
     tagSource: 'gitTag'
-    tag: $(Build.BuildNumber)
+    tag: 'v0.0.1'
+    assetUploadMode: 'replace'
+    target: '$(Build.SourceVersion)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
