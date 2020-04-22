@@ -26,11 +26,7 @@ steps:
     gitHubConnection: 'devopstest-demogithubacc'
     repositoryName: 'nagyistge/$(Build.Repository.Name)'
     action: 'create'
-<<<<<<< HEAD
     tagSource: 'userSpecifiedTag'
-=======
-    tagSource: 'gitTag'
->>>>>>> master
     tag: '0.0.1'
     assetUploadMode: 'replace'
     target: '$(Build.SourceVersion)'
