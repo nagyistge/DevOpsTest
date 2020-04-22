@@ -20,13 +20,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-
-- task: GitHubRelease@1
+- task: GitHubComment@0
   inputs:
     gitHubConnection: 'devopstest-demogithubacc'
     repositoryName: '$(Build.Repository.Name)'
-    action: 'edit'
-    tagSource: 'userSpecifiedTag'
-    tag: '0.0.1'
-    assetUploadMode: 'replace'
-    target: '$(Build.SourceVersion)'
+    comment: 'Build on Azure pipeline.'
+
