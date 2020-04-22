@@ -27,7 +27,7 @@ steps:
     repositoryName: 'nagyistge/$(Build.Repository.Name)'
     action: 'create'
     tagSource: 'userSpecifiedTag'
-    tag: '0.0.1'
+    tag: '0.0.2'
     assetUploadMode: 'replace'
     target: '$(Build.SourceVersion)'
     changeLogCompareToRelease: 'lastFullRelease'
