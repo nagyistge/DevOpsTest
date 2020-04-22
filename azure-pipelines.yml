@@ -25,10 +25,8 @@ steps:
   inputs:
     gitHubConnection: 'devopstest-demogithubacc'
     repositoryName: '$(Build.Repository.Name)'
-    action: 'create'
+    action: 'edit'
     tagSource: 'userSpecifiedTag'
-    tag: '0.0.2'
+    tag: '0.0.1'
     assetUploadMode: 'replace'
     target: '$(Build.SourceVersion)'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'commitBased'
