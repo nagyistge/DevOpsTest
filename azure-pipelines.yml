@@ -27,7 +27,7 @@ steps:
     repositoryName: 'nagyistge/$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
-    tagSource: 'gitTag'
+    tagSource: manual
     tag: $(Build.BuildNumber)
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
